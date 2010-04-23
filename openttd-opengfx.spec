@@ -12,7 +12,6 @@ BuildRequires:	grfcodec >= r2245
 BuildRequires:	nforenum >= r2281
 BuildRequires:	sed >= 4.0
 Requires:	openttd-data
-Obsoletes:	opengfx
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
