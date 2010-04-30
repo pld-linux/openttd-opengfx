@@ -1,12 +1,12 @@
 Summary:	Open Source graphics base set for OpenTTD
 Summary(pl.UTF-8):	Otwarty zestaw grafiki dla OpenTTD
 Name:		openttd-opengfx
-Version:	0.2.3
+Version:	0.2.4
 Release:	1
 License:	GPL v2+
 Group:		Applications/Games
 Source0:	http://bundles.openttdcoop.org/opengfx/releases/opengfx-%{version}-source.tar.gz
-# Source0-md5:	5e530e70e4ed5f2b20cc8b739c633830
+# Source0-md5:	d9081b5077bb5501e5b8859395733b7b
 URL:		http://wiki.openttd.org/Graphics_Replacement
 BuildRequires:	grfcodec >= r2245
 BuildRequires:	nforenum >= r2281
@@ -49,4 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc docs/{changelog.txt,readme.txt}
-%{_datadir}/openttd/data/opengfx-0.2.3.tar
+%{_datadir}/openttd/data/opengfx-%{version}.tar
