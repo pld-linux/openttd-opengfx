@@ -8,8 +8,8 @@ Group:		Applications/Games
 Source0:	http://bundles.openttdcoop.org/opengfx/releases/opengfx-%{version}-source.tar.gz
 # Source0-md5:	d9081b5077bb5501e5b8859395733b7b
 URL:		http://wiki.openttd.org/Graphics_Replacement
-BuildRequires:	grfcodec >= r2245
-BuildRequires:	nforenum >= r2281
+BuildRequires:	grfcodec >= 0.9.10-0.2245.1
+BuildRequires:	nforenum >= 3.4.6-0.2281.1
 BuildRequires:	sed >= 4.0
 Requires:	openttd-data
 BuildArch:	noarch
