@@ -1,0 +1,14 @@
+--- opengfx-0.3.0-source/scripts/Makefile.bundles~	2010-09-14 12:24:07.357236411 +0200
++++ opengfx-0.3.0-source/scripts/Makefile.bundles	2010-09-14 12:27:37.581380130 +0200
+@@ -30,11 +30,6 @@
+ 	$(_E) [Warning] The use of 'INSTALLDIR' is deprecated and may be removed in the future.
+ 	$(_E) [Warning] Use 'INSTALL_DIR' instead.
+ endif
+-ifdef DOCDIR
+-	$(_E) [INSTALL] docs to $(DOCDIR)
+-	$(_V) install -d $(DOCDIR)
+-	$(_V) install -c $(DOC_FILES) $(DOCDIR)
+-endif
+ 
+ md5: $(MD5_FILENAME)
+ 
