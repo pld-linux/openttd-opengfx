@@ -1,13 +1,14 @@
 Summary:	Open Source graphics base set for OpenTTD
 Summary(pl.UTF-8):	Otwarty zestaw grafiki dla OpenTTD
 Name:		openttd-opengfx
-Version:	0.4.7
+Version:	0.5.0
 Release:	1
 License:	GPL v2+
 Group:		Applications/Games
-Source0:	http://bundles.openttdcoop.org/opengfx/releases/%{version}/opengfx-%{version}-source.tar.xz
-# Source0-md5:	7b09917405da8ab39a9f5958b95ac126
+Source0:	http://bundles.openttdcoop.org/opengfx/releases/%{version}/opengfx-%{version}-source.tar.gz
+# Source0-md5:	4700a9753e0bfeec1aa85f7fefe88bcd
 Patch0:		%{name}-docs.patch
+Patch1:		%{name}-makefile.patch
 URL:		http://wiki.openttd.org/Graphics_Replacement
 BuildRequires:	grfcodec >= 5.0.0
 BuildRequires:	nml >= 0.2.4
@@ -36,7 +37,7 @@ prawami autorskimi.
 %prep
 %setup -q -n opengfx-%{version}-source
 %patch0 -p1
-%{__sed} -i 's,$(INSTALL_DIR),$(DESTDIR)$(INSTALL_DIR),' scripts/Makefile.bundles
+%patch1 -p1
 
 %build
 %{__make}
@@ -44,9 +45,10 @@ prawami autorskimi.
 %install
 rm -rf $RPM_BUILD_ROOT
 
+touch opengfx-%{version}.tar
 %{__make} install \
 	INSTALL_DIR="%{_datadir}/openttd/data" \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR="$RPM_BUILD_ROOT"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
